@@ -38,10 +38,10 @@ Setup and usage instructions will be added as the data pipeline is built.
 
 ## Team
 
-- Pavanchytanya Dharmapuri (group leader)
 - Atharva Nilesh Mahadik
 - Danush Gopinath
 - Nithish Bhat
+- Pavanchytanya Dharmapuri (group leader)
 - Sathyasai Rajan
 - Sivapriya Sugumaran
 
