@@ -32,9 +32,40 @@ Inference pipeline:
 
 ![Inference pipeline](docs/diagrams/3_gcp_inference.png)
 
-## Setup
+## Installation (tentative)
 
-Setup and usage instructions will be added as the data pipeline is built.
+These steps are a plan and will be finalized as the code is built.
+
+**Prerequisites:** Python 3.10 or later, Git, Docker, DVC, and the Google Cloud CLI with access to the project's GCP account.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/PavanchytanyaD/clinical-trial-termination.git
+   cd clinical-trial-termination
+   ```
+2. Create a virtual environment and install the dependencies:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+3. Sign in to Google Cloud:
+   ```bash
+   gcloud auth application-default login
+   ```
+4. Pull the versioned data:
+   ```bash
+   dvc pull
+   ```
+
+## Usage (tentative)
+
+These guidelines are a plan and will be updated with the exact commands as each pipeline is built.
+
+- **Data pipeline:** downloads the monthly AACT snapshot, cleans it, builds the structured features and BioBERT embeddings, and writes them to BigQuery.
+- **Training pipeline:** runs on Vertex AI Pipelines on a set schedule or when a new data version arrives. It trains the baseline and the neural network, evaluates them, and approves a model only if it passes the evaluation gate.
+- **Inference:** a FastAPI service on GKE takes a trial (NCT ID), returns the probability that it stops early, and gives a short explanation that cites similar past trials.
+- **Tests:** run with `pytest` from the repository root.
 
 ## Team
 
