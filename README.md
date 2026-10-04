@@ -41,7 +41,7 @@ Setup and usage instructions will be added as the data pipeline is built.
 - Atharva Nilesh Mahadik
 - Danush Gopinath
 - Nithish Bhat
-- Pavanchytanya Dharmapuri (group leader)
+- Pavanchytanya Dharmapuri
 - Sathyasai Rajan
 - Sivapriya Sugumaran
 
